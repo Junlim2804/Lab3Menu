@@ -20,9 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         textviewMessage=findViewById(R.id.textViewMessage);
         size=textviewMessage.getTextSize();
-
+       // size=textviewMessage.getTextSize()/getResources().getDisplayMetrics().density;
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         {
             size=size+1;
 
-            textviewMessage.setTextSize(size);
+            textviewMessage.setTextSize(textviewMessage.getTextSize()+1);
         }
         else if(id==R.id.action_decrease)
         {
